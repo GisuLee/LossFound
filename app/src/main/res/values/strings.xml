@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">분실물 탐지견</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="long_string">물건내용물건내용물건내용물건내용물건내용물건내용물건내용물건내용물건내용물건내용물건내용물건내용물건내용물건내용물건내용물건내용</string>
+    <string name="button_name">김예림바보</string>
+
+
+    <string name="admob_app_id">ca-app-pub-1472895926659868~3002166771</string>
+    <string name="banner_ad_unit_id">ca-app-pub-1472895926659868/1748154228</string>
+    <string name="banner_ad_unit_id_for_test">ca-app-pub-3940256099942544/2247696110</string>
+
+</resources>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/frameBackgroud"
+        android:orientation="horizontal"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp">
+
+            <LinearLayout
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/btn_add_area"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_white_background_card"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="지역 : "
+                        android:textColor="@color/textColor" />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12dp"
+                        android:id="@+id/txtSelectedArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="전체지역"
+                        android:textColor="@color/textColor"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_add_prdcategory"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_white_background_card"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="물품 : "
+                        android:textColor="@color/textColor" />
+
+                    <TextView
+                        android:textSize="12dp"
+                        android:id="@+id/txtSelectedPrd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="전체물품"
+                        android:textColor="@color/textColor"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_begin_date"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_white_background_card"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="검색시작일 : "
+                        android:textColor="@color/textColor" />
+
+                    <TextView
+                        android:textSize="12dp"
+                        android:id="@+id/txt_begin_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="2019-01-01"
+                        android:textColor="@color/textColor"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_end_date"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_white_background_card"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="검색종료일 : "
+                        android:textColor="@color/textColor" />
+
+                    <TextView
+                        android:textSize="12dp"
+                        android:id="@+id/txt_end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="2019-01-01"
+                        android:textColor="@color/textColor"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <!--<Spinner
+            android:id="@+id/spinner_areacategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:background="@drawable/shape_gray_border_line" />
+
+        <Spinner
+            android:id="@+id/spinner_prdcategory_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/shape_gray_border_line" />
+
+        <Spinner
+            android:id="@+id/spinner_prdcategory_sub"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:background="@drawable/shape_gray_border_line" />
+
+        <ImageView
+            android:id="@+id/btn_date_set"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:padding="0sp"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            app:srcCompat="@drawable/time_icon"
+            android:contentDescription="" />-->
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topPanel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/preview_list" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.activity.MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:theme="@style/ToolbarTheme">
+
+            <TextView
+                android:id="@+id/toolbar_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="습득물 검색조건 설정"
+                android:textColor="@color/textIconColor"
+                android:textSize="18sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!--첫번째-->
+        <TextView
+            style="@style/AccentLabel"
+            android:text="검색기간" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/txt_begin_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:alpha="0.87"
+                android:background="@drawable/shape_txt_border_line"
+                android:drawableRight="@drawable/icon_arrow_down"
+                android:gravity="center"
+                android:paddingLeft="13dp"
+                android:textColor="#000"
+                android:textColorHint="#1f000000"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/txt_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:alpha="0.87"
+                android:background="@drawable/shape_txt_border_line"
+                android:drawableRight="@drawable/icon_arrow_down"
+                android:gravity="center"
+                android:paddingLeft="13dp"
+                android:textColor="#000"
+                android:textColorHint="#1f000000"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <!--두번째-->
+        <TextView
+            style="@style/AccentLabel"
+            android:text="물품분류" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_prdcategory_main"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_spinner_background" />
+
+            <Spinner
+                android:id="@+id/spinner_prdcategory_sub"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_spinner_background" />
+        </LinearLayout>
+
+        <!--세번째-->
+        <TextView
+            style="@style/AccentLabel"
+            android:text="습득지역" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_areacategory_main"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_spinner_background" />
+
+            <Spinner
+                android:id="@+id/spinner_areacategory_sub"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_spinner_background" />
+
+        </LinearLayout>
+
+        <!--네번째-->
+        <TextView
+            style="@style/AccentLabel"
+            android:text="물품명" />
+
+
+        <com.example.gisulee.lossdog.view.component.ClearEditText
+            android:id="@+id/txtProductFeature"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_txt_border_line" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@android:style/ButtonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="검색하기">
+        </Button>
+    </LinearLayout>
+</RelativeLayout>

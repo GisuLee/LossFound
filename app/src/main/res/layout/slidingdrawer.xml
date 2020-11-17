@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <SlidingDrawer
+        android:id="@+id/slide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:allowSingleTap="true"
+        android:animateOnClick="true"
+        android:bottomOffset="5dp"
+        android:content="@+id/content"
+        android:handle="@+id/handle"
+        android:orientation="vertical"
+        android:topOffset="600dp">
+
+        <ImageView
+            android:id="@+id/handle"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:background="@drawable/selector_handle_click" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/frameBackgroud"
+                android:elevation="3dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingTop="4dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/btn_set_round"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:drawableRight="@drawable/icon_arrow_down"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="300M"
+                    android:textColor="@color/textColorAccent" />
+
+                <TextView
+                    android:id="@+id/line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/txtTitle"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="│"
+                    android:textColor="@color/textColor"
+                    android:textSize="18dp" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/check_police"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_checkbox_background"
+                            android:button="@android:color/transparent"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="경찰서"
+                            android:textColor="@drawable/selector_checkbox_textcolor" />
+
+                        <CheckBox
+                            android:id="@+id/check_sub_police"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_checkbox_background"
+                            android:button="@android:color/transparent"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="파출소"
+                            android:textColor="@drawable/selector_checkbox_textcolor" />
+
+                        <CheckBox
+                            android:id="@+id/check_subway"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_checkbox_background"
+                            android:button="@android:color/transparent"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="지하철"
+                            android:textColor="@drawable/selector_checkbox_textcolor" />
+
+                        <CheckBox
+                            android:id="@+id/check_korail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_checkbox_background"
+                            android:button="@android:color/transparent"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="기차역"
+                            android:textColor="@drawable/selector_checkbox_textcolor" />
+
+                        <CheckBox
+                            android:id="@+id/check_airport"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_checkbox_background"
+                            android:button="@android:color/transparent"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="공항"
+                            android:textColor="@drawable/selector_checkbox_textcolor" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_info"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:padding="10dp"
+                    android:background="@drawable/shape_button_oval"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_place_accent" />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/textColorAccent"
+                    android:textSize="20dp"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="위 모양의 아이콘을 클릭하여\n물건을 분실한 지역 근처를 선택하세요."/>
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray"
+                    android:orientation="vertical" />
+
+
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </SlidingDrawer>
+</LinearLayout>

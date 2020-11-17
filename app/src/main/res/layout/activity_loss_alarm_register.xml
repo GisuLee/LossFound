@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme">
+
+        <TextView
+            android:id="@+id/toolbar_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="습득물 검색조건 설정"
+            android:textColor="@color/textIconColor"
+            android:textSize="18sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_register"
+        android:layout_below="@id/toolbar"
+        android:background="@color/frameBackgroud">
+
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--분실명 설정-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="2dp"
+                android:background="@color/cardBackgorund"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="TODO"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/icon_roomservice" />
+
+                    <TextView
+                        style="@style/AccentLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:text="새 습득물 알림" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/swtich_alarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left |center_vertical" />
+            </androidx.cardview.widget.CardView>
+
+            <!--알림이름 설정-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_alarm_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="2dp"
+                android:background="@color/cardBackgorund"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="TODO"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/icon_label" />
+
+                        <TextView
+                            style="@style/AccentLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="사용자 알림 이름" />
+                    </LinearLayout>
+
+                    <com.example.gisulee.lossdog.view.component.ClearEditText
+                        android:id="@+id/txtAlarmName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="알림이름"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/txtAlarmNameCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textColor"
+                        android:textAlignment="textEnd"
+                        android:text = "알림을 구별할 수 있는 이름을 입력하세요."/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--분실장소-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="2dp"
+                android:background="@color/cardBackgorund"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="TODO"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/icon_place_accent" />
+
+                        <TextView
+                            style="@style/AccentLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="90"
+                            android:gravity="center_vertical"
+                            android:text="분실지역" />
+
+                        <ImageView
+                            android:id="@+id/btn_add_area"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="10"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/icon_arrow_forward"
+                            android:textColor="@color/blue" />
+
+                    </LinearLayout>
+
+                    <!-- 선택된 분실지역-->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/container_selected_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal"></LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            `
+            <!--물건선택-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_product_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="2dp"
+                android:background="@color/cardBackgorund"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="TODO"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/icon_category" />
+
+                        <TextView
+                            style="@style/AccentLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="90"
+                            android:gravity="center_vertical"
+                            android:text="분실물 분류" />
+
+                        <ImageView
+                            android:id="@+id/btn_add_prdcategory"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="10"
+                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/icon_arrow_forward"
+                            android:textColor="@color/blue" />
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/container_product_select"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--분실명 설정-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="2dp"
+                android:background="@color/cardBackgorund"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="TODO"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/icon_nametag" />
+
+                        <TextView
+                            style="@style/AccentLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="물품명 입력" />
+                    </LinearLayout>
+
+                    <com.example.gisulee.lossdog.view.component.ClearEditText
+                        android:id="@+id/txtProductFeature"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="5dp"
+                        android:hint="(선택) 분실한 물건의 브랜드 또는 색상"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textAlignment="viewEnd" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_register"
+        style="@android:style/ButtonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_enable_button_background"
+        android:enabled="false"
+        android:textSize="18dp"
+        android:text="등록하기"
+        android:textColor="@drawable/selector_enable_textcolor"></Button>
+</RelativeLayout>

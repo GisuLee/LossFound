@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notification_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/info_icon"
+        android:layout_toLeftOf="@id/img_new"
+        android:drawablePadding="5dp"
+        android:gravity="left|center_vertical"
+        android:text="알dddddddddddddddddddddddddddddddddddddddddd"
+        android:textColor="@color/textColorAccent"
+        android:textSize="18dp" />
+
+
+    <TextView
+        android:id="@+id/txtContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTitle"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toRightOf="@id/info_icon"
+        android:layout_toLeftOf="@id/img_new"
+        android:drawablePadding="5dp"
+        android:gravity="left|center_vertical"
+        android:text="카테고리"
+        android:textColor="@color/textColorAccent"
+        android:textSize="16dp" />
+
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtContent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/info_icon"
+        android:layout_toLeftOf="@id/img_new"
+        android:drawablePadding="5dp"
+        android:gravity="left|center_vertical"
+        android:text="전화번호"
+        android:textColor="@color/textColor"
+        android:textSize="14dp" />
+
+    <ImageView
+        android:id="@+id/info_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_button_oval"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/icon_chat" />
+
+    <TextView
+        android:id="@+id/img_new"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_alarm_badge"
+        android:paddingTop="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="2dp"
+        android:text="N"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+</RelativeLayout>
+
+

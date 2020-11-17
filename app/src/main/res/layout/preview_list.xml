@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/frameBackgroud"
+    tools:context=".view.activity.MainActivity">
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progressbar"
+        android:layoutAnimation="@anim/layout_animation_from_bottom"
+        android:id="@+id/listView"
+        />
+
+    <LinearLayout
+        android:background="@color/frameBackgroud"
+        android:id="@+id/linear_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/listView"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="불러오는 중..." />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/labelEnd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/listView"
+        android:background="@color/frameBackgroud"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:text="검색결과가 더 이상 없습니다."
+        android:textSize="18dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

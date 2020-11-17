@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.activity.MainActivity">
+
+    <item
+        android:id="@+id/action_call"
+        android:title="전화걸기"
+        android:icon="@drawable/icon_call_black"
+        app:showAsAction="always" />
+</menu>

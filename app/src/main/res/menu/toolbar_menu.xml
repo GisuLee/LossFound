@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <item
+        android:id="@+id/btn_refresh"
+        android:icon="@drawable/icon_refresh_white"
+        android:title="새로고침"
+        app:showAsAction="always" />
+
+
+</menu>

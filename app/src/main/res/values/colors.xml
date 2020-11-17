@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_gray">#f6f7f9</color>
+    <color name="middle_gray">#B6B5B5</color>
+    <color name="dark_gray">#797979</color>
+
+    <color name="blue">#5f97f1</color>
+    <color name="ligh_blue">#ECF1FF</color>
+    <color name="bottomTabSelected">#31579e</color>
+    <color name="bottomTabPressed">#51555e</color>
+    <color name="bottomTabUnselected">#262c38</color>
+    <color name="colorPrimary">#5f97f1</color>
+    <color name="colorPrimaryDark">#262c38</color>
+    <color name="colorAccentORGIANL">#5f97f1</color>
+    <!--3D5AFE-->
+    <color name="colorAccent">#0385ff</color>
+    <color name="colorControlNormal">#FFFFFF</color>
+    <color name="colorControlHighlight">#808080</color>
+    <color name="cardBackgorund">#ffffff</color>
+    <color name="frameBackgroud">#f5f6f8</color>
+    <color name="barbackground">#262c38</color>
+    <color name="textIconColor">#FFFFFF</color>
+    <color name="textColor">#656565</color>
+    <color name="textColorAccent">#000000</color>
+
+    <color name="enablebutton">@color/bottomTabSelected</color>
+    <color name="disablebutton">@color/frameBackgroud</color>
+    <color name="red">#e65f3f</color>
+
+    <color name="icon">#0385ff</color>
+    <color name="icon_check">@color/icon</color>
+    <color name="icon_label">@color/icon</color>
+    <color name="icon_place">#FF1744</color>
+    <color name="icon_nametag">@color/icon</color>
+    <color name="icon_roomservice">@color/icon</color>
+    <color name="icon_category">@color/icon</color>
+    <color name="icon_chat">@color/icon</color>
+    <color name="mylocation">@color/colorAccent</color>
+    <color name="pantool">@color/icon</color>
+    <color name="phone">@color/icon</color>
+    <color name="place_accent">@color/colorAccent</color>
+    <color name="icon_more">@color/icon</color>
+    <color name="play">@color/icon</color>
+    <color name="icon_file_down">@color/icon</color>
+    <color name="float_button_background">#2979FF</color>
+</resources>
