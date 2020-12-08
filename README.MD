@@ -30,7 +30,6 @@
 
 - 찾는 분실물이 많을 때 데이터를 임시로 저장할 수 있는 기능으로 로컬 저장소에 분실물 데이터를 저장합니다. 안드로이드 `SharedPreference API` 와 이미지를 저장하기 위해 `Base64 인코딩/디코딩`을 사용하였습니다.
 
-![https://github.com/GisuLee/LossFound/raw/master/readme_alarm2.png?raw=true](https://github.com/GisuLee/LossFound/raw/master/readme_alarm2.png?raw=true)
 
 ## Screenshot
 
